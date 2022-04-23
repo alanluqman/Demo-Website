@@ -1,0 +1,29 @@
+/*  This program has written in JavaScript and you should run it in Node environment  
+you have to install "prompt-sync" at first then run the program . 
+please run this command : npm install prompt-sync  */
+
+
+console.log("\n * * * *  THIS PROGRAM CHECKS YOUR AGE IF YOU CAN VOTE or NOT * * * * ")
+
+const prompt = require("prompt-sync")({ sigint: true });
+let age = prompt("How old are you? ", "none"); // user can input age from the console .
+
+vote(age); // this calls vote(num) function , and I assigned age as its parameter .
+
+// this function has a parameter called num  .
+function vote(num) {
+  // this condition determine if the age between 0 to 17 can't vote.
+  if (num < 18 && num >0) console.log("you can't Vote !");
+
+  //this condition determine if the age between 18 and 64 , which can vote.
+  else if (num >= 18 && num < 65) console.log("you're in the working years .");
+
+  //this condition determine if the age is above 65 and should be retired.
+  else if (num > 64 && num < 120) console.log("you should be retired !");
+
+  // this is last condition which check the age if it was not much with conditions above.
+  else
+    console.log(
+      "you have Entered wrong age ! please be sure to enter right number."
+    );
+}

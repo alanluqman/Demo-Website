@@ -18,6 +18,7 @@
 html{
     /*  62.5% of 16px = 10px */
     font-size: 62.5%;
+    margin: auto;
 }
 
 body{
@@ -257,6 +258,7 @@ margin-right: 2rem;
 .input-group{
     border: 1px solid  var(--color-border);
     border-radius: var(--border-radius);
+     
     display: flex;
 }
 .input-group .input{
@@ -267,6 +269,7 @@ margin-right: 2rem;
 
 .input-group .btn{
     margin: 4px;
+
 }
 
 
@@ -306,7 +309,13 @@ margin-right: 2rem;
 
 .plan-container{
     width: 90%;
-    padding: 4rem;
+    padding: 4rem 2rem;
+    transition: 0.2s;
+    margin: auto;
+}
+.plan-container:hover{
+    padding-top: 0;
+    
 }
 
 .plan__name {
@@ -355,6 +364,8 @@ margin-right: 2rem;
 .plan-holder{
     display: grid;
     grid-template-columns:1fr;
+     
+    
 }
 
 @media screen and (min-width: 1024px) {

@@ -621,6 +621,17 @@ content: open-quote ;
        margin-left: 6rem; 
     }
 }
+@media screen and (max-width:768px) {
+    .testimonial .quote,
+    .testimonial .quote__author{
+        font-size: 2rem;
+    }
+    .testimonial .quote{
+       margin: 1rem; 
+       
+    }
+}
+
 
 /*  Callout  */ 
 
@@ -839,9 +850,11 @@ content: open-quote ;
 /*  Footer  */
 .footer{
     background: #232323;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
 }
 .footer a{
     color: #777;
+    transition: color 0.3s;
 }
 .footer a:hover{
     color: white;
@@ -849,6 +862,9 @@ content: open-quote ;
 .footer__section{
     padding: 2rem ;
     border-bottom: 1px solid #393939;
+}
+.footer__section .list{
+    margin: 0;
 }
 .footer__heading{
     color: white;
@@ -860,12 +876,19 @@ content: open-quote ;
     margin-top: 5rem;
     text-align: center;
 }
+.footer__brand img{
+    width: 100%;
+    max-width: 230px;
+}
 .footer__copyright{
     font-size: 2.1rem;
     color: white;
     opacity: 0.3;
 }
 @media screen and (min-width:768px) {
+    .footer{
+    clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
+}
     .footer__sections{
        grid-template-columns: repeat(auto-fit,minmax(10rem,1fr)); 
     }
